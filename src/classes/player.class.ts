@@ -14,7 +14,7 @@ export abstract class Player {
     /*
     Players always have an action relative to the game they are being implemented in and a game start/finish action
     */
-    public abstract gameAction(): void;
+    public abstract gameAction(): boolean;
     public abstract gameStartAction(): void;
     public abstract gameFinishAction(): void;
 

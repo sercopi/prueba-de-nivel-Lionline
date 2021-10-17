@@ -2,7 +2,6 @@ import { EventEmitter } from "events";
 export abstract class Game {
 
     public name: string;
-    //posible game states are defined by child classes because they are specific to each type of Game
     public emitter: EventEmitter;
 
     constructor({ name, emitter }: { name: string, emitter: EventEmitter }) {
