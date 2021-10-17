@@ -1,6 +1,6 @@
-##Prueba de nivel 
+## Prueba de nivel 
 
-###Cómo funciona:
+### Cómo funciona:
 
 He modelado las especificaciones como tres clases abstractas, que definen alguna propiedad o método que he pensado sería común en otros tipos de juego y dejan otros métodos o propiedades abstractas a que se adapten según el juego que se quiera modelar, en este caso un juego de apuestas o <i>BettingGame</i>.
 
@@ -26,14 +26,14 @@ En caso de que el jugador no ganara la apuesta, se ejecuta una comprobación a s
 
 En caso de que el juego termine, el BettingGame emitirá el evento "game_finish" que consumirán todos los jugadores y que limpiará sus intervalos de acción de cada segundo, haciendo que dejen den jugar.
 
-###Tests
+### Tests
 
 Los tests se encuentran en la carpeta <i>tests</i>, están hechos con Jasmine y se realizan a las 3 clases.
 
 He testeado de manera general las funciones de cada clase, sus constructores y su interacción mockeando o espiando los eventos del EventEmitter del que disponen. En algunos casos he tenido que mockear la función Math.random, para obligar a seguir un camino específico al test.
 
-###Las variables de entorno
+### Las variables de entorno
 Podrían haberse hecho con la librería dotenv de node y haberlas usado como process.env."variable", aunque en este caso he usado un json que instancio y exporto con un typo específico para darle algo de validación.
 
-###Los errores
+### Los errores
 No he emitido ningún error debido a que la ejecución estaba controlada y simulada en todo momento por el código y una configuración tipada, de manera que como no hay input mucho más input eterno, no sabía muy bien qué errores emitir...
