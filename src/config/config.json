@@ -1,0 +1,12 @@
+{
+  "name": "Lionline",
+  "winningProbability": 30,
+  "betsPerSecond": 1,
+  "playerActivity": 50,
+  "winningMultiplier": 2,
+  "players": 3,
+  "balanceLimits": {
+    "top": 10,
+    "bottom": 1
+  }
+}

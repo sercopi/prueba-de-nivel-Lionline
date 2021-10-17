@@ -1,0 +1,21 @@
+{
+  "name": "pruebalionline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/ts-node ./node_modules/jasmine/bin/jasmine --config=jasmine.json",
+    "start": "node ./node_modules/typescript/bin/tsc && node dist/src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.10.0",
+    "@types/node": "^16.11.0",
+    "jasmine": "^3.10.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.3.0",
+    "tslint": "^5.12.1",
+    "typescript": "^4.4.4"
+  }
+}
