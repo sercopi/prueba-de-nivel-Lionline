@@ -36,12 +36,15 @@ export class BettingGamePlayer extends Player {
 
     public gameAction(): boolean {
         const betQuantity = Math.floor(Math.random() * (this.balance)) + 1;
+        //places a bet of random quantity
         this.emitter.emit("bet", { name: this.name, betQuantity: betQuantity });
         const winningResult = Math.floor(Math.random() * 101);
+        //calculates if the bet has been won
         if (winningResult <= this.winningProbability) {
             this.emitter.emit("win", { name: this.name, betQuantity: betQuantity });
             return true;
         }
+        //calculates if the players has no more balance after the lost bet
         if (this.balance <= 0) {
             clearInterval(this.intervalReference);
             this.emitter.emit("lose", { name: this.name, betQuantity: betQuantity })
