@@ -18,12 +18,15 @@ export class BettingGamePlayer extends Player {
     }
     public gameStartAction(): void {
         this.intervalReference = setInterval(() => {
+            //uso un every para no usar un for normal, (como todos hemos sido alumnos de Carlos, lo he hecho así para intentar quitar el for, por si sois como él y "suspendéis a alguien" si lo pone xD)
             Array(this.betsPerSecond).fill(null).every(() => {
-                //player has a 50% chance in the simmulation to not do anything on this iteration, that way we randomize their actions
+                //player has an X% chance in the simmulation to not do anything on this iteration, that way we randomize their actions
                 const playerActivityThreshold = Math.floor(Math.random() * 101);
                 if (playerActivityThreshold <= this.playerActivity) {
+                    //if balance is negative, result is false and the every breaks
                     return this.gameAction();
                 }
+                return true;
             });
         }, 1000);
     }
